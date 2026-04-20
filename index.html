@@ -180,19 +180,20 @@ src="https://www.facebook.com/tr?id=1677742453445639&ev=PageView&noscript=1"
     </a>
 
     <script>
-        // Subscribe Event Tracking logic
-        const btn = document.getElementById('subscribeEvent');
-        
-        btn.addEventListener('click', function() {
-            // Console log for testing
-            console.log("Subscribe Event Triggered: WhatsApp Clicked");
+  // Subscribe Event Tracking logic
+  const btn = document.getElementById('subscribeEvent');
 
-            // Agar aap Meta Pixel use kar rahe hain toh yahan code daalein:
-            // fbq('track', 'Lead');
-            
-            // Agar Google Ads use kar rahe hain:
-            // gtag('event', 'conversion', {'send_to': 'AW-XXXX/XXXX'});
-        });
-    </script>
+  if (btn) {
+    btn.addEventListener('click', function() {
+      // Console log for testing
+      console.log("Subscribe Event Triggered: WhatsApp Clicked");
+
+      // Meta Pixel logic for Subscribe event
+      if (typeof fbq === 'function') {
+        fbq('track', 'Subscribe'); 
+      }
+    });
+  }
+</script>
 </body>
 </html>
