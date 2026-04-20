@@ -1,1 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kailash Book - India's #1 Trusted Exchange</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        
+        body {
+            background-color: #0d0d0d;
+            background-image: radial-gradient(circle at top, #1a1a1a 0%, #000 80%);
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
 
+        .wrapper {
+            width: 100%;
+            max-width: 480px;
+            padding: 40px 20px;
+        }
+
+        .logo-container { margin-bottom: 20px; }
+        .logo {
+            width: 150px;
+            border-radius: 50%;
+            border: 3px solid #d4af37;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        h1 {
+            color: #d4af37;
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #d4af37;
+            border-radius: 10px;
+            padding: 15px 5px;
+        }
+
+        .feature-item i {
+            color: #d4af37;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .feature-item p {
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Pulsing WhatsApp Button */
+        .cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(180deg, #25d366, #128c7e);
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+            animation: pulse 1.5s infinite;
+            border: 2px solid rgba(255,255,255,0.2);
+            width: 100%;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.04); }
+            100% { transform: scale(1); }
+        }
+
+        .footer-text {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Floating WA Icon */
+        .floating-wa {
+            position: fixed;
+            bottom: 25px;
+            right: 20px;
+            background: #25d366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="logo-container">
+            <img src="https://i.ibb.co/h7p9fF9/kailash-logo.png" alt="Kailash Book" class="logo">
+        </div>
+
+        <h1>India's #1 Trusted Cricket Exchange</h1>
+        <p class="description">Play with the best. 100% Safe, Secure & Lightning Fast Withdrawals. Join the Premium Network Today!</p>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-bolt"></i>
+                <p>24/7 Fast Withdrawal</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <p>100% Safe & Secure</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-headset"></i>
+                <p>24/7 Client Support</p>
+            </div>
+        </div>
+
+        <a href="https://wa.me/91XXXXXXXXXX" class="cta-btn" id="subscribeEvent">
+            <i class="fab fa-whatsapp"></i> GET YOUR ID NOW
+        </a>
+
+        <div class="footer-text">
+            18+ Only. Play Responsibly.<br>
+            © 2024 KAILASH BOOK. All Rights Reserved.
+        </div>
+    </div>
+
+    <a href="https://wa.me/91XXXXXXXXXX" class="floating-wa">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Subscribe Event Tracking logic
+        const btn = document.getElementById('subscribeEvent');
+        
+        btn.addEventListener('click', function() {
+            // Console log for testing
+            console.log("Subscribe Event Triggered: WhatsApp Clicked");
+
+            // Agar aap Meta Pixel use kar rahe hain toh yahan code daalein:
+            // fbq('track', 'Lead');
+            
+            // Agar Google Ads use kar rahe hain:
+            // gtag('event', 'conversion', {'send_to': 'AW-XXXX/XXXX'});
+        });
+    </script>
+</body>
+</html>
